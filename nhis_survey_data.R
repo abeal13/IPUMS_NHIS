@@ -1,6 +1,6 @@
 #This is for the data from the 2022 NHIS survey which included questions about complementary 
 # and integrative health practices such as acupuncture. 
-setwd("/Users/anthonybeal/Desktop/Comp_Code_DataSci/Biostats/NHIS/")
+setwd("YOUR_PATH_HERE")
 source("utils.R")
 ddi <- read_ipums_ddi("nhis_00001_ddi.xml")
 nhis_data <- read_ipums_micro(ddi)
