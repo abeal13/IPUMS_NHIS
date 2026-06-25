@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook ID="ddi2-0fedfaa0-fc7f-013d-607d-02420a1c0305-nhis_00001.dat-nhis.ipums.org" version="2.5" xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an Integrated Health Interview Series Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'nhis_00001.dat'</subTitl>
+        <IDNo>ddi2-0fedfaa0-fc7f-013d-607d-02420a1c0305-nhis_00001.dat-nhis.ipums.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2025-04-16">April 16, 2025</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract nhis_00001.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">IPUMS</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="IPUMS" affiliation="University of Minnesota" role="Documentation">IPUMS</producer>
+        <prodDate date="2025-04-16">April 16, 2025</prodDate>
+        <prodPlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact URI="https://ipums.org" affiliation="University of Minnesota">IPUMS</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="nhis">IPUMS NHIS</serName>
+        <serInfo>DOI:10.18128/D070.V7.4</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2025-04-16"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Technical Person Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Condition Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Limitation Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Acupuncture - General Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Massage - General Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Relaxation Technique - General Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Yoga - General Variables -- PERSON</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-2445">
+        <timePrd date="2022" event="single">2022</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2022 NHIS
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="yes"><![CDATA[The Public Health Service Act (Section 308 (d)) provides that the data collected by the National Center for Health Statistics (NCHS), Centers for Disease Control and Prevention (CDC), may be used only for the purpose of health statistical reporting and analysis. Any effort to determine the identity of any reported case is prohibited by this law. NCHS does all it can to assure that the identity of data subjects cannot be disclosed. All direct identifiers, as well as any characteristics that might lead to identification, are omitted from the data files. Any intentional identification or disclosure of a person or establishment violates the assurances of confidentiality given to the providers of the information. 
+
+Therefore, users will: 
+
+Use the data in these data files for statistical reporting and analysis only. 
+
+Make no use of the identity of any person or establishment discovered inadvertently and advise the Director, NCHS, of any such discovery (301-458-4500). 
+
+Not link these data files with individually identifiable data from other NCHS or non-NCHS data files. 
+
+By using these data, you signify your agreement to comply with the above-stated statutorily-based requirements. ]]></confDec>
+        <contact URI="http://www.nhis.ipums.org/" affiliation="IPUMS">Integrated Health Interview Series</contact>
+        <citReq><![CDATA[Publications and research reports based on the NHIS database must cite it appropriately.  The citation is as follows:
+
+Lynn A. Blewett, Julia A. Rivera Drew, Miriam L. King, Kari C.W. Williams, Daniel Backman, Annie Chen, and Stephanie Richards. IPUMS Health Surveys: National Health Interview Survey, Version 7.4 [dataset]. Minneapolis, MN: IPUMS, 2024. https://doi.org/10.18128/D070.V7.4
+
+If possible, citations should also include the URL for the NHIS site:  http://www.nhis.ipums.org.
+
+Please see http://www.nhis.ipums.org/nhis/citation.shtml for precise formatting of the citation.]]></citReq>
+        <conditions><![CDATA[The Public Health Service Act (Section 308 (d)) provides that the data collected by the National Center for Health Statistics (NCHS), Centers for Disease Control and Prevention (CDC), may be used only for the purpose of health statistical reporting and analysis. Any effort to determine the identity of any reported case is prohibited by this law. NCHS does all it can to assure that the identity of data subjects cannot be disclosed. All direct identifiers, as well as any characteristics that might lead to identification, are omitted from the data files. Any intentional identification or disclosure of a person or establishment violates the assurances of confidentiality given to the providers of the information. 
+
+Therefore, users must: 
+
+Use the data in these data files for statistical reporting and analysis only. 
+
+Make no use of the identity of any person or establishment discovered inadvertently and advise the Director, NCHS, of any such discovery (301-458-4500). 
+
+Not link these data files with individually identifiable data from other NCHS or non-NCHS data files. 
+
+By using these data, you signify your agreement to comply with the above-stated statutorily-based requirements. 
+
+Furthermore, users of NHIS data must agree to abide by the conditions of use. Users must agree to the following conditions:
+  
+  
+(1) Use the data in these data files for statistical reporting and analysis only 
+
+(2) Make no use of the identity of any person or establishment discovered inadvertently and advise the Director of NCHS of any such discovery (301-458-4500) 
+
+(3) Do not link these data with individually-identifiable data from NCHS or non-NCHS data files 
+
+(4) No fees may be charged for use or distribution of the data.  All persons are granted a limited license to use and distribute these data, but you may not charge a fee for the data if you distribute them to others. 
+
+(5) Cite the NHIS appropriately.  Publications and research reports based on the database must cite it appropriately.  Please see http://www.nhis.ipums.org/nhis/citation.shtml
+
+(6) NHIS cannot be used to study small geographic areas.  The smallest geographical areas identified in the NHIS are regions (groups of states) and a limited number of metropolitan areas.
+
+(7) This system provides individual-level data only.  The NHIS Data Extraction System will not produce tables. You will need to use a statistical software package, such as Stata, SAS, or SPSS, to analyze the downloaded data.  Alternatively, you may use the NHIS-SDA tabulator to produce tables online, without making a data extract.]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  2022 survey data. Variables focused on CAM and Pain. ]]></notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>nhis_00001.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="rectangular"/>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>IPUMS, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr><var ID="YEAR" dcml="0" files="ExtractData" intrvl="contin" name="YEAR">
+  <location EndPos="4" StartPos="1" width="4"/>
+  <labl>Survey year</labl>
+  <txt><![CDATA[YEAR is a four-digit variable reporting the calendar year (e.g., 2003) the survey was conducted and the data were collected. YEAR indicates the survey year reported on the household record.]]></txt>
+  <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="SERIAL" dcml="0" files="ExtractData" intrvl="contin" name="SERIAL">
+  <location EndPos="10" StartPos="5" width="6"/>
+  <labl>Sequential Serial Number, Household Record</labl>
+  <txt><![CDATA[SERIAL is an IPUMS NHIS-constructed value that is an identifying number unique to each household in a given survey year. The combination of YEAR and SERIAL provides a unique identifier for every household in the IPUMS NHIS database.]]></txt>
+  <codInstr><![CDATA[CodesSERIAL is a 6-digit numeric variable.]]></codInstr>
+  <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="STRATA" dcml="0" files="ExtractData" intrvl="contin" name="STRATA">
+  <location EndPos="14" StartPos="11" width="4"/>
+  <labl>Stratum for variance estimation</labl>
+  <txt><![CDATA[STRATA is an IPUMS NHIS-constructed variable based on the NHIS sample design variables in the public use files concatenated with a sample design period indicator. STRATA represents the impact of the sample design stratification on the estimates of variance and standard errors. It is constant within a sample design period and changes between sample design periods. For analysis, researchers need to use STRATA in conjunction with PSU to account for stratification and clustering when computing variance estimates with IPUMS NHIS data.
+
+See the User Notes on variance estimation for additional information.     
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+  <codInstr><![CDATA[CodesSTRATA is a 5-digit numeric variable.
+
+000:	Not in Universe]]></codInstr>
+  <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="PSU" dcml="0" files="ExtractData" intrvl="contin" name="PSU">
+  <location EndPos="17" StartPos="15" width="3"/>
+  <labl>Primary sampling unit (PSU) for variance estimation</labl>
+  <txt><![CDATA[PSU is the primary sampling unit variable that represents the impact of the sample design clustering on the estimates of variance and standard errors. It is constant within a sample design period and changes between sample design periods. For analysis, researchers need to use PSU in conjunction with STRATA to account for stratification and clustering when computing variance estimates with IPUMS NHIS data.  
+
+See the User Notes on variance estimation for additional information.
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+  <codInstr><![CDATA[CodesPSU is a 3-digit numeric variable.
+
+000:	Not in Universe]]></codInstr>
+  <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="NHISHID" dcml="0" files="ExtractData" intrvl="contin" name="NHISHID">
+  <location EndPos="31" StartPos="18" width="14"/>
+  <labl>NHIS Unique identifier, household</labl>
+  <txt><![CDATA[NHISHID is an IPUMS NHIS-constructed value that is an identifying number unique to each household in a given survey year. Using NHISHID, analysts can link IPUMS NHIS data with additional household-level data elements, from the NHIS source public use data files, that are not currently available in IPUMS.  NHISHID is a single variable constructed by concatenating multiple data elements from the NHIS source data files.  Analysts wishing to link person-level NHIS data should use the person-level linking key NHISPID.
+
+See the user note on LINKING for instructions on how to create links between IPUMS NHIS and NHIS source data.  
+
+After the 2019 redesign, there is no longer a sampling weight to produce household population estimates. See the user note on the calculation and use of sampling weights for additional information.]]></txt>
+  <codInstr><![CDATA[CodesNHISHID is a 14-character string variable.]]></codInstr>
+  <concept vocab="IPUMS">Technical Household Variables -- HOUSEHOLD</concept>
+  <varFormat schema="other" type="character"/>
+</var>
+<var ID="PERNUM" dcml="0" files="ExtractData" intrvl="contin" name="PERNUM">
+  <location EndPos="33" StartPos="32" width="2"/>
+  <labl>Person number within family/household (from reformatting)</labl>
+  <txt><![CDATA[PERNUM is an IPUMS NHIS-constructed variable that numbers all persons within each family or within each household consecutively (starting with "1") in the order in which they appear in the original NHIS data.  PERNUM was created by IPUMS NHIS during the process of reformatting the original NHIS public use files. 
+
+Prior to 2019, PERNUM numbers all persons within each family. Beginning in 2019, PERNUM numbers all person within a household and has a maximum of "2," as only the sample child and sample adult are identified in the original NHIS data. For more information, see the Comparability section.]]></txt>
+  <codInstr><![CDATA[CodesPERNUM is a 2-digit numeric variable.]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="NHISPID" dcml="0" files="ExtractData" intrvl="contin" name="NHISPID">
+  <location EndPos="49" StartPos="34" width="16"/>
+  <labl>NHIS Unique Identifier, person</labl>
+  <txt><![CDATA[NHISPID is an IPUMS NHIS-constructed value that is an identifying number unique to each person in a given survey year.  Using NHISPID, analysts can link IPUMS NHIS data with additional data elements, from the NHIS source public use data files, that are not currently available in IPUMS.  For example, researchers can use NHISPID to link variables in IPUMS NHIS with other variables from the core NHIS files variables.  Alternatively, users may use NHISPID to link variables from IPUMS with variables from NHIS supplements that are not yet part of IPUMS NHIS. NHISPID is a single variable constructed by concatenating multiple data elements from the NHIS source data files.  
+
+Analysts wishing to link household-level NHIS data should use the household-level linking key NHISHID.
+
+See the user note on LINKING for instructions on how to create links between IPUMS NHIS and NHIS source data.]]></txt>
+  <codInstr><![CDATA[CodesNHISPID is a 16-character string variable.]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="character"/>
+</var>
+<var ID="HHX" dcml="0" files="ExtractData" intrvl="contin" name="HHX">
+  <location EndPos="56" StartPos="50" width="7"/>
+  <labl>Household number (from NHIS)</labl>
+  <txt><![CDATA[For sample adults and sample children, HHX reports the person's household number on the original NHIS data. HHX is unique within sample but only unique across samples when combined with information on year. Prior to 2019, this variable was available for all persons.]]></txt>
+  <codInstr><![CDATA[This is a 7-digit numeric variable with 0 implied decimal places]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="character"/>
+</var>
+<var ID="SAMPWEIGHT" dcml="3" files="ExtractData" intrvl="contin" name="SAMPWEIGHT">
+  <location EndPos="68" StartPos="57" width="12"/>
+  <labl>Sample Person Weight</labl>
+  <txt><![CDATA[SAMPWEIGHT is an IPUMS NHIS-constructed variable that represents, with a few exceptions, the random selection of a sample person in the household to complete a supplement survey.  (The exceptions to this generalization are the 1983 health insurance supplement and 1993 health insurance, access to care, and family resources supplements, which were asked of all persons in the second half of the year.)
+
+For survey years 1997 forward, SAMPWEIGHT is based on the Final Annual Sample Adult and Sample Child Weights in the original NHIS public use files. This weight should be used with variables taken from the sample adult or sample child supplements for 1997 on (as indicated by the supplement title in the "Source" section toward the top of each variable description). 
+
+SAMPWEIGHT also contains the sampling weights for a subset of the pre-1997 supplements, for which the definition of a sample person, and the rules governing the selection of sample persons, are less consistent. The universe statements for SAMPWEIGHT document who was included in the supplements requiring use of this weight on a year-by-year basis. SAMPWEIGHT consistently represents the inverse probability of selection into a supplement, adjusted for non-response with additional post-stratification adjustments for age, race/ethnicity, and sex using the Census Bureau's population control totals.
+
+Users should review the documentation for extracted variables--most notably the "Weights" section toward the top of each variable description--to ascertain which weight is the appropriate choice for a given survey year. See the User Notes on the use of sampling weights for additional information.]]></txt>
+  <codInstr><![CDATA[CodesSAMPWEIGHT is a 12-digit numeric variable with three implied decimals. That is, values of 012345678912 should be interpreted as 12345678.912. The command files delivered with IPUMS extracts automatically divide SAMPWEIGHT by 1,000, so no further adjustment is needed.]]></codInstr>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="ASTATFLG" dcml="0" files="ExtractData" intrvl="discrete" name="ASTATFLG">
+  <location EndPos="69" StartPos="69" width="1"/>
+  <labl>Sample adult flag</labl>
+  <txt><![CDATA[ASTATFLG identifies the record of a sample adult. A sample adult is the one person over age 18 per household who is randomly selected to complete the sample adult questionnaire. For 1997-2018, a sample adult is the one adult per family who was selected at random by the computerized survey instrument to answer additional health-related questions, under the survey design instituted in 1997.  All persons other than sample adults (those not having the value 1 in ASTATFLG) are coded as "not in universe" for variables derived from the additional questions asked only of sample adults.  (Some additional questions were asked of both sample adults and sample children.)  Every adult in each family, except for active duty armed forces members, was eligible to be selected as the sample adult.  
+
+Prior to 2019, ASTATFLG has the value "no one selected as sample adult" (code 4) for all adults in the family in the following two cases: 1) sample adult status was incorrectly assigned to someone in the armed forces, or 2) it could not be ascertained which adult in the family was chosen as sample adult.   
+
+For 2020 only, SALNGPRTFLG further distinguishes between sample adults included in the longitudinal sample and sample adults included in the partial sample. Please see the user note on COVID-related changes to the NHIS for more information on the longitudinal and partial samples.
+
+A similar flag variable, CSTATFLG, identifies the record of a sample child.
+
+This variable is automatically included in all extracts, but only has valid values for 1997 forward.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>Sample adult, has record</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Sample adult, no record</labl>
+  </catgry>
+  <catgry>
+    <catValu>3</catValu>
+    <labl>Not selected as sample adult</labl>
+  </catgry>
+  <catgry>
+    <catValu>4</catValu>
+    <labl>No one selected as sample adult</labl>
+  </catgry>
+  <catgry>
+    <catValu>5</catValu>
+    <labl>Armed forces member</labl>
+  </catgry>
+  <catgry>
+    <catValu>6</catValu>
+    <labl>AF member, selected as sample adult</labl>
+  </catgry>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="CSTATFLG" dcml="0" files="ExtractData" intrvl="discrete" name="CSTATFLG">
+  <location EndPos="70" StartPos="70" width="1"/>
+  <labl>Sample child flag</labl>
+  <txt><![CDATA[CSTATFLG identifies the record of a sample child. A sample child is the one person under age 18 per household who is randomly selected to complete the sample child questionnaire. For 1997-2018, the sample child is the one person under age 18 per family who was selected at random by the computerized survey instrument for additional health-related questions, under the survey design instituted in 1997. All persons other than sample children (those not having the value 1 in CSTATFLG) are coded as "not in universe" for variables derived from these additional questions asked only of sample children.  (Some additional questions were asked of both sample adults and sample children.)   
+
+Prior to 2019, Every child in each family, except for active duty armed forces members and emancipated minors, was eligible to be selected as the sample child.  Emancipated minors are persons age 14 to 17 who are married or living with a partner OR who live on their own without the supervision of a parent, other adult family member, or legal guardian.  
+
+CSTATFLG has the value "no one selected as sample child" (code 4) for all children in the family in the following two cases prior to 2019: 1) if sample child status was incorrectly assigned to someone who was ineligible, or 2) if it was unknown which child in the family was chosen as sample child.   
+
+A similar flag variable, ASTATFLG, identifies the record of a sample adult.
+
+This variable is automatically included in all extracts, but only has valid values for 1997 forward.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>Sample child-has record</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Sample child-no record</labl>
+  </catgry>
+  <catgry>
+    <catValu>3</catValu>
+    <labl>Not selected as sample child</labl>
+  </catgry>
+  <catgry>
+    <catValu>4</catValu>
+    <labl>No one selected as sample child</labl>
+  </catgry>
+  <catgry>
+    <catValu>5</catValu>
+    <labl>Emancipated minor</labl>
+  </catgry>
+  <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="ARTHGLUPEV" dcml="0" files="ExtractData" intrvl="discrete" name="ARTHGLUPEV">
+  <location EndPos="71" StartPos="71" width="1"/>
+  <labl>Ever told had arthritis/rheumatoid arthritis/gout/lupus/fibromyalgia</labl>
+  <txt><![CDATA[ARTHGLUPEV provides responses by sample adults to the question, "Have you ever been told by a doctor or other health professional that you have some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia?"
+
+Definitions
+
+All of the conditions mentioned in this question are types of arthritis.  
+&nbsp;Rheumatoid arthritis is an autoimmune disease in which the joint lining becomes inflamed as part of the body's immune system activity, leading to chronic pain and loss of function.  Gout is a painful condition attacking the small joints, such as the big toe, and can usually be controlled by medication and changes in diet.  Lupus is a chronic rheumatic disease which causes inflammation that may affect many parts of the body, including the heart, lungs, skin, joints, kidneys, and nervous system.  Fibromyalgia is an arthritis-related condition characterized by generalized muscular pain and fatigue.  The most prevalent form of arthritis, osteoarthritis, is often simply referred to as arthritis and is a degenerative joint disease in which the cartilage covering the ends of bones in the joints degenerates, causing pain and loss of movement.
+
+The Field Representative's Manual for 2002 forward defined the term "arthritis," as "an inflammation of one or more joints of the body, usually producing pain, redness, and stiffness."  This definition was not routinely shared with respondents.Follow-up Questions and Related Variables]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Condition Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="LAWALKCLIMDIF" dcml="0" files="ExtractData" intrvl="discrete" name="LAWALKCLIMDIF">
+  <location EndPos="72" StartPos="72" width="1"/>
+  <labl>Amount of difficulty walking or climbing steps</labl>
+  <txt><![CDATA[For sample adults age 18 and older, LAWALKCLIMDIF reports the level of difficulty she/he faces when walking or climbing steps. 
+
+This variable was first introduced in 2010 as part of the Quality of Life supplement and was included in that supplement through 2017. Beginning in 2018, this item was included on the sample adult questionnaire.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Some difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>3</catValu>
+    <labl>A lot of difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>4</catValu>
+    <labl>Cannot do at all</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Limitation Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="WALKDIF12ST1" dcml="0" files="ExtractData" intrvl="discrete" name="WALKDIF12ST1">
+  <location EndPos="73" StartPos="73" width="1"/>
+  <labl>Amount of difficulty walking up or down 12 steps</labl>
+  <txt><![CDATA[For sample adults who do not use a wheelchair or scooter to get around or it was not ascertained whether they use a wheelchair or scooter to get around (CHAIR), WALKDIF12ST1 reports the level of difficulty they face (if any) when walking up or down 12 steps. Prior to 2019, WALKDIF12ST1 was collected via a single question fielded to both those who did not use special equipment or need help to get around, and those who used special equipment or need help to get around but who did not use a wheelchair or scooter. Beginning in 2019, WALKDIF12ST1 was modified to align with disability measures developed by the Washington Group on Disability Statistics (see below). In 2019, WALKDIF12ST1 was asked separately to sample adults age 18+ who did not use special equipment and those who did but did not use a wheelchair or scooter to get around or it was not ascertained whether they used a wheelchair or scooter to get around. IPUMS staff combined these two variables in the 2019 and later samples into a single variable to enhance comparability with earlier years. 
+
+WALKDIF12ST was collected in different sections of the NHIS questionnaire over time, which may affect raw frequencies but should not affect estimates produced with the correct sampling weight. Please refer to the universe tab for more information on who has responses for WALKDIF12ST1 in specific years and the weights tab for the correct sampling weight to use in each year.  
+
+The Washington Group on Disability Statistics&nbsp;In 2019, functioning and disability measures included on the NHIS questionnaire were modified to align with validated, internationally-comparable disability measures developed by the Washington Group on Disability Statistics (WG). For more information about the WG initiative, other WG functioning and disability measures included on the NHIS questionnaire, and guidance for researchers about how to use the WG measures in analyses, please see our user note on the Washington Group Disability Measures.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Some difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>3</catValu>
+    <labl>A lot of difficulty</labl>
+  </catgry>
+  <catgry>
+    <catValu>4</catValu>
+    <labl>Cannot do at all</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Limitation Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="ACUYR" dcml="0" files="ExtractData" intrvl="discrete" name="ACUYR">
+  <location EndPos="74" StartPos="74" width="1"/>
+  <labl>Had acupuncture, past 12 months</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 in 2022, ACUYR reports whether the person had used acupuncture in the past 12 months. 
+
+Prior to 2022, questions about acupuncture were asked as part of the Complementary and Alternative Health Supplement. In 1999, information about acupuncture use in the past 12 months was collected from all sample adults. In 2002, the question was fielded to sample adults who had ever seen a practitioner for acupuncture (ACUEV), and in 2007 and 2012 the question was also asked of all sample children.
+
+Beginning in 2022, ACUYR was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Definitions&nbsp;The 1999 Field Representative's Manual defines acupuncture as:
+when a health professional uses small needles to stimulate points on the body that relieve pain and speed healing."  This definition was not routinely shared with respondents.The 2002 Field Representative's Manual defines acupuncture is:
+based on the theory that health is determined by a balanced flow of life energy (chi or qi) which is thought to be present in all living organisms.  This life energy circulates throughout the body along a series of energy pathways (meridians).  Each of these meridians is linked to specific internal organs and organ systems.  Within this system of energy pathways, there are over one thousand acupoints that can be stimulated, through the insertion of needles.  This is thought to help correct and rebalance the flow of life energy, and therefore restore health.  Acupuncture has been used to treat a number of health problems and conditions ranging from the common cold to addiction and chronic 	fatigue syndrome.This definition was not routinely shared with respondents.
+
+The 2007 and 2012 Field Representative's Manual defines acupuncture as: 
+Acupuncture describes a family of procedures involving stimulation of anatomical points on the body by a variety of techniques.  American practices of acupuncture incorporate medical traditions from China, Japan, Korea, and other countries.  The acupuncture technique that has been most studied scientifically involves penetrating the skin with thin, solid, metallic needles that are manipulated by the hands or by electrical stimulation.Field representatives were advised to "feel free to offer [this definition] even if the respondent has not requested [it]."
+
+In 2022, acupuncture was not further defined in the field representative's manual.Related Variables&nbsp;Additional information about the use of acupuncture was collected for respondents who reported using acupuncture in the past 12 months. 
+
+Prior to 2022, the additional information collected included variables on frequency and cost of use. Please use the IPUMS NHIS drop-down menus and search function to explore these variables.
+
+Beginning in 2022, the additional information collected included variables on the use of acupuncture to treat or manage physical pain and to restore overall health. 
+
+ACUPAIN: Saw practitioner of acupuncture for pain
+
+ACUHLTH: Saw practitioner of acupuncture to restore overall health
+]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Acupuncture - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="ACUPAIN" dcml="0" files="ExtractData" intrvl="discrete" name="ACUPAIN">
+  <location EndPos="75" StartPos="75" width="1"/>
+  <labl>Saw a practitioner of acupuncture for pain</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 who had seen a practitioner of acupuncture in the past 12 months (ACUYR), ACUPAIN indicates whether they saw the practitioner to treat or manage physical pain. 
+
+ACUPAIN was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices in 2022. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Related Variables
+
+Please see ACUYR to learn more about questions asked about acupuncture over time, including a list of related variables fielded in 2022.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown - refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown - not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown - don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Acupuncture - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="MASYR" dcml="0" files="ExtractData" intrvl="discrete" name="MASYR">
+  <location EndPos="76" StartPos="76" width="1"/>
+  <labl>Saw provider for massage, past 12 months</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 in 2022, MASYR reports whether the person had seen a practitioner for massage therapy in the past 12 months. 
+
+Prior to 2022, questions about massage therapy were asked as part of the Complementary and Alternative Health Supplement. In 1999, information about massage use in the past 12 months was collected from all sample adults. In 2002, the question was fielded to sample adults who had ever seen a practitioner for massage (MASEV), and in 2007 and 2012 the question was also asked of all sample children.
+
+Beginning in 2022, MASYR was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Definitions&nbsp;The 1999 Field Representative's Manual defines massage therapy as:
+using touch and rubbing to reduce pain and create relaxation.This definition was not routinely shared with respondents.
+
+The 2002 Field Representative's Manual says that massage:
+involves pressing, rubbing, and otherwise manipulating muscles and other soft tissues of the body, causing them to relax and lengthen and allowing for the flow of pain-relieving oxygen and blood to the affected area.  Using their hands, and sometimes feet, elbows, and forearms, massage therapists may employ over 75 different methods, such as Swedish massage, deep-tissue massage, neuromuscular massage, and manual lymph drainage.  Massage is considered effective for relieving any type of pain in the body's soft tissue, including back, neck, and shoulder pain, headaches, bursitis, tendinitis, etc.This definition was not routinely shared with respondents.
+
+The 2007 and 2012 Field Representative's Manual provides a definition that focuses on the massage therapist: 
+Massage therapists manipulate muscle and connective tissue to enhance function of those tissues and promote relaxation and well-being.In 2007 and 2012 field representatives were advised to "feel free to offer [this definition] even if the respondent has not requested [it]."
+
+The 2002, 2007, and 2012 survey questions asked whether the person had seen "a practitioner" (for sample adults) or "a provider or practitioner" (for sample children) for massage in the past 12 months.  The 2007 and 2012 Manual defines an "alternative provider or practitioner" as:
+someone who is knowledgeable about a specific alternative health practice.  This person provides care or gives advice about its use, and usually receives payment for his or her services.In 2022, massage therapy was not further defined in the field representative's manual.Related Variables&nbsp;Additional information about use of massage therapy was collected for respondents who reported using massage therapy in the past 12 months. 
+
+Prior to 2022, the additional information collected included variables on frequency of use and amount of out-of-pocket costs. Please use the IPUMS NHIS drop-down menus and search function to learn more about these variables.
+
+Beginning in 2022, the additional information collected included variables on seeing a practitioner of massage to treat or manage physical pain and to restore overall health.
+
+MASPAIN: Saw practitioner of massage for pain
+
+MASHLTH: Saw practitioner of massage to restore overall health
+]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Massage - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="MASPAIN" dcml="0" files="ExtractData" intrvl="discrete" name="MASPAIN">
+  <location EndPos="77" StartPos="77" width="1"/>
+  <labl>Saw a practitioner of massage for pain</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 who had seen a practitioner of massage in the past 12 months (MASYR), MASPAIN indicates whether they saw the practitioner to treat or manage physical pain. 
+
+MASPAIN was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices in 2022. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Related Variables
+
+Please see MASYR to learn more about questions asked about massage over time, including a list of related variables fielded in 2022.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown - refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown - not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown - don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Massage - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="RELMEDYR" dcml="0" files="ExtractData" intrvl="discrete" name="RELMEDYR">
+  <location EndPos="78" StartPos="78" width="1"/>
+  <labl>Used meditation, past 12 months</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 in 2022, RELMEDYR reports whether the person had used meditation in the past 12 months. In 2002, the question was fielded to sample adults who had ever used meditation (RELMEDEV), and in 2007 the question was also asked of all sample children.
+Relaxation techniques--including meditation, deep breathing exercises, guided imagery, progressive relaxation, stress management classes, and support group meetings--were one of many alternative health treatment modalities included in the 2007 Alternative Health Supplement.  
+
+In 2002 and 2007, sample adults who had not used meditation in the past year, or who had never used meditation, were asked to give a reason why they had not used that technique.
+
+In addition, both sample children (2007 only) and sample adults (both 2002 and 2007) who had used any of the six specified relaxation techniques in the past 12 months were asked whether the techniques were used to treat a specific medical condition and, if so, what that condition was.
+
+Beginning in 2022, RELMEDYR was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Definitions&nbsp;The 2002 Field Representative's Manual says that meditation: 
+achieves mental calmness and physical relaxation by suspending the stream of thoughts that normally occupy the mind.  Generally performed once or twice a day for roughly 20 minutes at a time, meditation is used to reduce stress, alter hormone levels, and elevate one's mood.  In addition, the experienced mediator [sic] can achieve a reduction in blood pressure, adrenaline levels, hear rate, and skin temperature.This definition was not routinely shared with respondents.
+
+The 2007 Field Representative's Manual says that meditation:
+refers to a group of techniques, most of which started in Eastern religious or spiritual traditions.  In meditation, a person learns to focus his attention and suspend the stream of thoughts that normally occupy the mind.  This practice is believed to result in a state of greater physical relaxation, mental calmness, and psychological balance.  Practicing meditation can change how a person relates to the flow of emotions and thoughts in the mindIn 2007, field representatives were advised to "feel free to offer [this definition] even if the respondent has not requested [it]."
+
+In 2022, the questionnaire text shared with the respondent stated that:
+Meditation includes mindfulness, mantra, and spiritual meditation. In meditation a person focuses, stills, or quiets the mind.Related Variables
+
+Additional information about the use of meditation 
+
+In 2002, 2007, and 2022, if sample adults gave a positive response to RELMEDYR (or to the comparable variables in 2002 and 2007: RELBRETHYR, RELGIMYR, RELRELAXYR, RELSTRESYR [2007 only], or RELSUPYR [2007 only], which cover use of other relaxation techniques in the past 12 months), they were asked a series of follow-up questions.  
+
+For 2002 and 2007, these questions, which are described in more detail below, addressed the following topics: whether bought relaxation technique self-help book or materials; amount paid for self-help materials; times took class or saw practitioner for relaxation techniques; amount paid per class or to practitioner; any conventional medical treatments received and the timing of the conventional treatment relative to the relaxation technique treatment; the reasons for using relaxation techniques; and the disclosure of the use of relaxation techniques to conventional medical professionals.
+
+For 2022, these questions collected additional details about the use of meditation to treat or manage physical pain and to restore overall health.
+
+2002 and 2007&nbsp;As noted, sample adults who had used relaxation techniques in the past 12 months (i.e., those with a positive response in RELMEDYR, RELBRETHYR, RELGIMYR, RELRELAXYR, RELSTRESYR, RELSUPYR) were asked further questions about their use of relaxation techniques, as follows:  
+
+number of relaxation techniques used (RELNO)
+
+relaxation technique used the most (RELMOST)
+
+importance of use of relaxation technique (RELIMPORT)
+
+bought relaxation technique self-help book or materials (RELBOOK)
+
+amount paid for relaxation technique self-help materials (RELBOOKPAY)
+
+ever saw practitioner for relaxation technique (RELPRAC)
+
+saw practitioner for relxation technique, past 12 months (RELPRACYR)
+
+took class or saw practitioner for relaxation technique (RELCLASS)
+
+times took class or saw practitioner for relaxation technique (RELCLASSNO)
+
+amount paid per class or to practitioner for relaxation technique (RELCLASSPAY)
+
+needed medical attention for relaxation technique side effects (RELSIDEMED)
+
+reasons for using relaxation technique (RELUSCOMBO, RELUSENERGY, RELUSHCREC, RELUSIMMUN, RELUSINTER, RELUSMEDCOST, RELUSMEDFAIL, RELUSRELREC, RELUSWELL, RELUSCOPE)
+
+whether combined relaxation technique with conventional treatments (RELNOCONV, RELCOUN, RELNPMED, RELPMED, RELPT, RELSURG)
+
+timing of relaxation technique treatment, relative to use of conventional treatments (RELCOUNTIM, RELNPMEDTIM, (RELPMEDTIM, RELPTTIM, RELSURGTIM)
+
+whether informed conventional medical practitioners of use of relaxation technique (RELLCONVHP, RELLDENT, RELLDO, RELLMD, RELLNURS, RELLPHARM, RELLPSYCHI, RELLPSYCHO)
+ 
+
+Both sample adults and sample children who had used any of the specified relaxation techniques (meditation, deep breathing exercises, guided imagery, progressive relaxation, stress management class, support group meeting) in the past year were asked if they had done so to treat a specific health problem or condition (see RELTREAT).  If the answer was affirmative, they were asked to specify the condition treated.   
+
+There are 131 total variables for specific conditions that were treated by relaxation techniques, including 72 for sample adults, 28 for sample children, and 31 for both sample adults and sample children.  See RELTREAT for more detail and the full list of conditions that persons could indicate were treated with relaxation techniques, including meditation.  Analysts interested in the conditions that relaxation techniques were used to treat may also wish to consult the following variables:
+
+condition for which relaxation technique was used most (RELTCONMOST)
+ 
+
+first condition for which relaxation technique was used (RELCON1)
+
+degree of help from relaxation technique, 1st condition (RELCON1HELP)
+
+second condition for which relaxation technique was used (RELCON2)
+
+degree of help from relaxation technique, 2nd condition (RELCON2HELP)
+
+third condition for which relaxation technique was used (RELCON3)
+
+degree of help from relaxation technique, 3rd condition (RELCON3HELP)
+
+condition count for relaxation technique (RELCONNO)
+Respondents who had ever used meditation but had not used it in the past 12 months were asked to provide a reason why they had not used it.  The reasons included:
+
+too expensive RELNOCOST
+
+health care worker said not toRELNOHC
+
+not needed RELNONEED
+
+not proven to work RELNOPROOF
+
+side effects RELNOSIDE
+
+did not think of it RELNOTHINK
+
+did not work before RELNOWORK
+
+no reason RELNOREAS
+
+some other reason RELNOOTH
+Persons who had never used meditation (i.e., with a negative response in RELMEDEV) were asked why they had not used the technique.  The reasons included:
+
+too expensive RELNEVCOST
+
+health care worker said not to RELNEVHC
+
+didn't know about it RELNEVKNOW
+
+not needed RELNEVNEED
+
+not proven to work RELNEVPROOF
+
+not safe RELNEVSAFE
+
+did not think of it RELNEVTHINK
+
+doesn't work RELNEVWORK
+
+no reason RELNEVREAS
+
+some other reason RELNEVOTH
+2022&nbsp;
+RELMEDPAIN: Practiced meditation for pain
+
+RELMEDHLTH: Practiced meditation to restore overall health
+]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Relaxation Technique - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="RELMEDPAIN" dcml="0" files="ExtractData" intrvl="discrete" name="RELMEDPAIN">
+  <location EndPos="79" StartPos="79" width="1"/>
+  <labl>Practiced meditation for pain</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 who had used meditation in the past 12 months (RELMEDYR), RELMEDPAIN indicates whether they used meditation to treat or manage physical pain. 
+
+RELMEDPAIN was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices in 2022. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Related Variables
+
+Please see RELMEDYR to learn more about questions asked about meditation over time, including a list of related variables fielded in 2022.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown - refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown - not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown - don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Relaxation Technique - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="YTQYOGYR" dcml="0" files="ExtractData" intrvl="discrete" name="YTQYOGYR">
+  <location EndPos="80" StartPos="80" width="1"/>
+  <labl>Practiced yoga, past 12 months</labl>
+  <txt><![CDATA[YTQYOGYR reports whether the person had practiced yoga in the past 12 months.  Please see the Comparability and Universe Tabs for information on changes to the universe of this variable over time.
+
+For 2002, 2007, 2012, and 2017, yoga, Tai chi, and Qi gong were one of many alternative health treatment modalities included in the Complementary and Alternative Health Supplements. 
+
+Beginning in 2022, YTQYOGYR was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Definitions&nbsp;The 2002 Field Representative's Manual provides the following definition:
+Yoga, practiced for over 5,000 years, combines breathing exercises, physical postures, and meditation to calm the nervous system and balance body, mind, and spirit.  It is thought to prevent specific diseases and maladies by keeping the energy meridians [see ACUYR] open and life energy (qi) flowing.  Usually performed in classes, sessions are conducted once a week or more and roughly last 45 minutes.  Yoga has been used to lower blood pressure, reduce stress, and improve coordination, flexibility, concentration, sleep, and digestion.  It has also been used as supplementary therapy for such diverse conditions as cancer, diabetes, asthma, and AIDS.This definition was not routinely shared with respondents.
+
+Beginning in 2007, the Field Representative's Manual provides a truncated version of that definition: 
+Yoga combines breathing exercises, physical postures, and meditation to calm the nervous system and balance body, mind, and spirit.  Usually performed in classes, sessions are conducted once a week or more and roughly last 45 minutes.In 2007 and later years, field representatives were advised to "feel free to offer [this definition] even if the respondent has not requested [it]."
+
+In 2022, yoga was not further defined in the field representative's manual.Related Variables
+
+In some years, additional information about use of yoga was collected for respondents who reported practicing yoga in the past 12 months. 
+
+Prior to 2022, the additional information collected included variables on frequency of practice, whether or not any conventional medical treatments were used, and the reason for using yoga. 
+
+Beginning in 2022, the additional information collected includes variables on breathing exercises and meditation used as part of yoga and the use of yoga to treat or manage physical pain and to restore overall health. 
+
+YTQYOGBREX: Does breathing exercises as part of yoga
+
+YTQYOGMED: Does meditation as part of yoga
+
+YTQYOGPAIN: Used yoga for pain
+
+YTQYOGHLTH: Used yoga to restore overall health
+]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown-refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown-not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown-don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Yoga - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+<var ID="YTQYOGPAIN" dcml="0" files="ExtractData" intrvl="discrete" name="YTQYOGPAIN">
+  <location EndPos="81" StartPos="81" width="1"/>
+  <labl>Used yoga for pain</labl>
+  <txt><![CDATA[For sample adults age 18+ and sample children ages 4-17 who had practiced yoga in the past 12 months (YTQYOGYR), YTQYOGPAIN indicates whether they practiced yoga to treat or manage physical pain. 
+
+YTQYOGPAIN was one of twenty-five variables sponsored by the National Center for Complementary and Integrative Health (NCCIH) at the National Institutes of Health (NIH) to assess complementary and integrative health (CIH) practices in 2022. Please see THPYART to learn more about the Complementary and Integrative Health content section, including a complete list of CIH variables fielded in the 2022 NHIS.
+
+Related Variables
+
+Please see YTQYOGYR to learn more about questions asked about yoga over time, including a list of related variables fielded in 2022.]]></txt>
+  <catgry>
+    <catValu>0</catValu>
+    <labl>NIU</labl>
+  </catgry>
+  <catgry>
+    <catValu>1</catValu>
+    <labl>No</labl>
+  </catgry>
+  <catgry>
+    <catValu>2</catValu>
+    <labl>Yes</labl>
+  </catgry>
+  <catgry>
+    <catValu>7</catValu>
+    <labl>Unknown - refused</labl>
+  </catgry>
+  <catgry>
+    <catValu>8</catValu>
+    <labl>Unknown - not ascertained</labl>
+  </catgry>
+  <catgry>
+    <catValu>9</catValu>
+    <labl>Unknown - don't know</labl>
+  </catgry>
+  <concept vocab="IPUMS">Yoga - General Variables -- PERSON</concept>
+  <varFormat schema="other" type="numeric"/>
+</var>
+</dataDscr>
+</codeBook>
