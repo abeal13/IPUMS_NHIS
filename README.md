@@ -8,7 +8,7 @@ All of the details of the 2022 survey can be found in "NHIS Survey 2022.PDF".
 If you are interested in working with IPUMS datasets yourself, follow the links below. 
 
 https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.html
-This is the CDC's main site where they have links that explaon the most recent 2024 NHIS survey. 
+This is the CDC's main site where they have links that explain the most recent 2024 NHIS survey. 
 
 https://healthsurveys.ipums.org/
 This is where you can actually extract data from the surveys (they are quite large). 
