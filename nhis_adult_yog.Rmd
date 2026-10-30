@@ -1,0 +1,111 @@
+---
+title: "NHIS: Adults and Yoga"
+author: "Tony Beal"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```{r, echo=FALSE, include=FALSE}
+library(patchwork)
+path <- getwd()
+setwd(path)
+source("utils.R")
+load("adult_nhis_data.RData")
+```
+
+```{r, echo=FALSE}
+yog_df <- adult_nhis_data |> 
+  filter(YTQYOGYR != 0) |> 
+  select(YTQYOGYR)
+
+p_yoga <- ggplot(yog_df, aes(factor(YTQYOGYR, levels = c(1, 2, 7, 8, 9)))) +
+  geom_bar(fill = "#E5A2FA", color= "#674A70", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Response to YTQYOGYR", 
+    drop = FALSE, 
+    labels = c(
+      "1" = "No", 
+      "2" = "Yes", 
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 30000)) + 
+  labs(
+    x = "Response to YTQYOGYR", 
+    y = "Count", 
+    title = "During the past 12 months, \ndid you practice yoga?"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+
+```
+
+```{r, echo=FALSE, fig.width=12, fig.height=6, out.width="100%"}
+yog_pain_df <- adult_nhis_data |> 
+  filter(YTQYOGPAIN != 0) |> 
+  select(YTQYOGPAIN)
+
+p_yoga_pain <- ggplot(yog_pain_df, aes(factor(YTQYOGPAIN, levels = c(1, 2, 7, 8, 9)))) +
+  geom_bar(fill = "#BD9FFC", color = "#574973", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Response to YTQYOGPAIN", 
+    drop = FALSE, 
+    labels = c(
+      "1" = "No", 
+      "2" = "Yes", 
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 3000)) + 
+  labs(
+    x = "Response to YTQYOGPAIN", 
+    y = "Count", 
+    title = "In the past 12 months have you used yoga for pain? "
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+
+p_yoga + p_yoga_pain
+```
+
+```{r, echo=FALSE, include=FALSE}
+yog_yes <- getCount(adult_nhis_data, adult_nhis_data$YTQYOGYR, 2)
+yog_no <- getCount(adult_nhis_data, adult_nhis_data$YTQYOGYR, 1)
+
+yog_yes # n = 4291
+yog_no # n = 22264
+
+yog_yes_per <- round((yog_yes/nrow(adult_nhis_data))*100, 2)
+yog_no_per <- round((yog_no/nrow(adult_nhis_data))*100, 2)
+# 15.518 % of adults in our sample have answered 'yes' to having practiced 
+# yoga in the past 12 months 
+```
+YTQYOGYR: *Have you practiced yoga in the past 12 months?*\
+Yes: `r yog_yes`, (`r yog_yes_per`)\
+No: `r yog_no`, (`r yog_no_per`)\
+
+```{r, echo=FALSE, include=FALSE}
+
+yog_pain_yes <- getCount(adult_nhis_data, adult_nhis_data$YTQYOGPAIN, 2)
+yog_pain_no <- getCount(adult_nhis_data, adult_nhis_data$YTQYOGPAIN, 1)
+
+yog_pain_yes # n = 1290
+yog_pain_no # n = 3000
+
+yog_pain_yes_per <- round((yog_pain_yes/yog_yes)*100, 2)
+yog_pain_no_per <- round((yog_pain_no/yog_yes)*100, 2)
+# 30.1% of the 4291 people who answered yes to practicing yoga in the past year, 
+# reported practicing yoga for pain management. 
+```
+YTQYOGPAIN: *"In the past 12 months have you used yoga for pain?"*\
+Yes: `r yog_pain_yes`, (`r yog_pain_yes_per`)\
+No: `r yog_pain_no`, (`r yog_pain_no_per`)\
+
+

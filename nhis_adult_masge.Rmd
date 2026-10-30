@@ -19,7 +19,7 @@ masge_df <- adult_nhis_data |>
   filter(MASYR != 0) |> 
   select(MASYR)
 
-masyr <- ggplot(masge_df, aes(factor(MASYR, levels = c(1, 2, 7, 8, 9)))) +
+p_masyr <- ggplot(masge_df, aes(factor(MASYR, levels = c(1, 2, 7, 8, 9)))) +
   geom_bar(fill = "#77D6E6", color = "#376169", stat = "count", show.legend = FALSE) +
   scale_x_discrete(
     "Response to MASYR",
@@ -42,9 +42,43 @@ masyr <- ggplot(masge_df, aes(factor(MASYR, levels = c(1, 2, 7, 8, 9)))) +
   theme(
     axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1), 
     axis.title.x = element_text(margin = margin(t = 15, unit = "pt")), 
-    plot.margin = margin(l = 25, unit = 'pt')
+    #plot.margin = margin(l = 25, unit = 'pt')
   )
-print(masyr)
+
+```
+
+```{r, echo=FALSE, fig.width=12, fig.height=6, out.width="100%"}
+mas_pain_df <- adult_nhis_data |> 
+  filter(MASPAIN != 0) |> 
+  select(MASPAIN)
+
+p_maspain <- ggplot(mas_pain_df, aes(factor(MASPAIN, levels = c(1, 2, 7, 8, 9)))) +
+  geom_bar(fill = "#97A6E6", color = "#370169", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Response to MASPAIN",
+    drop = FALSE, 
+    labels = c(
+      "1" = "No", 
+      "2" = "Yes", 
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 2000)) + 
+  labs(
+    x = "Response to MASPAIN", 
+    y = "Count", 
+    title = "In the past 12 months, \nhave you seen a practitioner of massage for pain?"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1), 
+    axis.title.x = element_text(margin = margin(t = 15, unit = "pt")), 
+    #plot.margin = margin(l = 25, unit = 'pt')
+  )
+
+p_masyr + p_maspain
 ```
 
 ```{r, echo=FALSE, include=FALSE}
@@ -162,7 +196,7 @@ acu_yes_per <- round((acu_yes/nrow(adult_nhis_data))*100, 2)
 ```
 \
 ```{r, echo=FALSE, fig.width=12, fig.height=6, out.width="100%"}
-p_acuyr + masyr
+p_acuyr + p_masyr
 ```
 \
 Yes to massage: `r msg_yes`, (`r msg_yes_per`%)\

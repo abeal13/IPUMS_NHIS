@@ -88,9 +88,8 @@ acu_no <- getCount(adult_nhis_data, adult_nhis_data$ACUYR, 1)
 
 acu_yes # n = 665
 acu_no # n = 25913 
-# total  27,651
 
-acuyr_per <- getPercentage(adult_nhis_data, adult_nhis_data$ACUYR, 2)
+acuyr_per <- round((acu_yes/nrow(adult_nhis_data)*100), 2)
 
 ```
 
