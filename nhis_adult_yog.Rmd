@@ -88,8 +88,8 @@ yog_no_per <- round((yog_no/nrow(adult_nhis_data))*100, 2)
 # yoga in the past 12 months 
 ```
 YTQYOGYR: *Have you practiced yoga in the past 12 months?*\
-Yes: `r yog_yes`, (`r yog_yes_per`)\
-No: `r yog_no`, (`r yog_no_per`)\
+Yes: `r yog_yes`, (`r yog_yes_per`%)\
+No: `r yog_no`, (`r yog_no_per`%)\
 
 ```{r, echo=FALSE, include=FALSE}
 
@@ -105,7 +105,7 @@ yog_pain_no_per <- round((yog_pain_no/yog_yes)*100, 2)
 # reported practicing yoga for pain management. 
 ```
 YTQYOGPAIN: *"In the past 12 months have you used yoga for pain?"*\
-Yes: `r yog_pain_yes`, (`r yog_pain_yes_per`)\
-No: `r yog_pain_no`, (`r yog_pain_no_per`)\
+Yes: `r yog_pain_yes`, (`r yog_pain_yes_per`%)\
+No: `r yog_pain_no`, (`r yog_pain_no_per`%)\
 
 

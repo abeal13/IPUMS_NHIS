@@ -1,0 +1,167 @@
+---
+title: 'NHIS: Adults Walking and Climbing Stairs'
+author: "Tony Beal"
+date: "`r Sys.Date()`"
+output: html_document
+---
+\
+```{r, echo=FALSE, include=FALSE}
+library(patchwork)
+path <- getwd()
+setwd(path)
+source("utils.R")
+load("adult_nhis_data.RData")
+```
+
+```{r, echo=FALSE}
+walk_df <- adult_nhis_data |> 
+  filter(LAWALKCLIMDIF != 0) |>
+  select(LAWALKCLIMDIF)
+
+p_walk_climb <- ggplot(walk_df, aes(factor(LAWALKCLIMDIF, levels = c(1, 2, 3, 4, 7, 8, 9)))) +
+  geom_bar(fill = "#B9DEA9", color = "#4B5945", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Response to LAWALKCLIMDIF", 
+    drop = FALSE,
+    labels = c(
+      "1" = "No difficulty", 
+      "2" = "Some difficulty", 
+      "3" = "A lot of difficulty", 
+      "4" = "Cannot do at all",
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 30000)) + 
+  labs(
+    x = "Response to LAWALKCLIMDIF", 
+    y = "Count", 
+    title = "LAWALKCLIMDIF Amount of difficulty walking or climbing steps"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+```
+
+```{r, echo=FALSE, fig.width=12.5, fig.height=6, out.width="100%"}
+steps_df <- adult_nhis_data |> 
+  filter(WALKDIF12ST1 != 0) |> 
+  select(WALKDIF12ST1) 
+
+
+p_12_steps <- ggplot(steps_df, aes(factor(WALKDIF12ST1, levels = c(1, 2, 3, 4, 7, 8, 9)))) +
+  geom_bar(fill = "#DBEB9D", color = "#666E4B", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Response to WALKDIF12ST1", 
+    drop = FALSE,
+    labels = c(
+      "1" = "No difficulty", 
+      "2" = "Some difficulty", 
+      "3" = "A lot of difficulty", 
+      "4" = "Cannot do at all",
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 30000)) + 
+  labs(
+    x = "Response to WALKDIF12ST1", 
+    y = "Count", 
+    title = "WALKDIF12ST1 Amount of difficulty walking up or down 12 steps"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+
+p_walk_climb + p_12_steps
+```
+
+```{r, echo=FALSE}
+arth_walk_df <- adult_nhis_data |> 
+  filter(ARTHGLUPEV == 2 & LAWALKCLIMDIF != 0) |> 
+  select(LAWALKCLIMDIF)
+
+p_arth_walk <- ggplot(arth_walk_df, aes(factor(LAWALKCLIMDIF, levels = c(1, 2, 3, 4, 7, 8, 9)))) +
+  geom_bar(fill = "#E3D788", color = "#8A7A53", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Responses to LAWALKCKIMBDIF", 
+    drop = FALSE,
+    labels = c(
+      "1" = "No difficulty", 
+      "2" = "Some difficulty", 
+      "3" = "A lot of difficulty", 
+      "4" = "Cannot do at all",
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 5000)) + 
+  labs(
+    x = "Response to LAWALKCKIMBDIF", 
+    y = "Count", 
+    title = "LAWALKCKIMBDIF Responses of Adults Who Responsed 'Yes'\n to ARTHGLUPEV"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+```
+
+```{r, echo=FALSE, fig.width=12.5, fig.height=6, out.width="100%"}
+arth_12_df <- adult_nhis_data |> 
+  filter(ARTHGLUPEV == 2 & WALKDIF12ST1 != 0) |> 
+  select(WALKDIF12ST1)
+
+p_arth_12 <- ggplot(arth_12_df, aes(factor(WALKDIF12ST1, levels = c(1, 2, 3, 4, 7, 8, 9)))) +
+  geom_bar(fill = "#E3C988", color = "#8A7A53", stat = "count", show.legend = FALSE) +
+  scale_x_discrete(
+    "Responses to WALKDIF12ST1", 
+    drop = FALSE,
+    labels = c(
+      "1" = "No difficulty", 
+      "2" = "Some difficulty", 
+      "3" = "A lot of difficulty", 
+      "4" = "Cannot do at all",
+      "7" = "Refused", 
+      "8" = "Not Ascertained", 
+      "9" = "Don't Know"
+    )
+  ) + 
+  scale_y_continuous(limits = c(0, 5000)) + 
+  labs(
+    x = "Response to WALKDIF12ST1", 
+    y = "Count", 
+    title = "WALKDIF12ST1 Responses of Adults Who Responsed 'Yes'\n to ARTHGLUPEV"
+  ) + 
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+  )
+
+p_arth_walk + p_arth_12
+```
+
+
+```{r, echo=FALSE}
+adult_arth_yes <- getCount(adult_nhis_data, adult_nhis_data$ARTHGLUPEV, 2)
+arth_walk_alot1 <- adult_nhis_data |> 
+  filter(LAWALKCLIMDIF == 3, ARTHGLUPEV == 2) |> 
+  summarise(count = n())
+ 
+arth_walk_alot2 <- adult_nhis_data |> 
+  filter(WALKDIF12ST1 == 3, ARTHGLUPEV == 2) |> 
+  summarise(count = n())
+#   
+# `r arth_walk_alot1`, (`r round((arth_walk_alot1/adult_arth_yes)*100, 2)`%) people who answered 'yes' to ARTHGLUPEV also selected 'a lot of difficulty' when asked about difficulty walking or climbing steps.\
+# 
+# `r arth_walk_alot2`, (`r round((arth_walk_alot2/adult_arth_yes)*100, 2)`%) people who answered 'yes' to ARTHGLUPEV also selected 'a lot of difficulty' when asked about difficulty walking up or down 12 steps.\
+```
+\
+(ARTHGLUPEV: *"Have you EVER been told by a doctor or other health professional that you had some form of arthritis, rheumatoid arthritis, gout, lupus, or fibromyalgia (fy-bro-my-AL-jeeuh)?"*)\
+
+
